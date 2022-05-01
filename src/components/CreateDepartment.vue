@@ -10,7 +10,7 @@
                 <div class="form-group">
                   <label for="">Description:</label>
                   <input type="text" required
-                    class="form-control" name="address" aria-describedby="Write Department Description" placeholder="Description" v-model="department.address">
+                    class="form-control" name="address" aria-describedby="Write Department Description" placeholder="Description" v-model="department.description">
                 </div>
                 <div class="form-group">
                   <label for="">Name:</label>
@@ -57,7 +57,7 @@ export default {
             body:JSON.stringify(
                 {
                 createdBy:"TestUser"
-                ,address:this.department.address
+                ,description:this.department.description
                 ,name: this.department.name
                 ,phone:this.department.phone
                 }
