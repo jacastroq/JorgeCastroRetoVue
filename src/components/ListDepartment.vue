@@ -21,20 +21,20 @@
               <thead>
                   <tr>
                       <th>ID</th>
-                      <th>ADDRESS</th>
+                      <th>DESCRIPTION</th>
                       <th>NAME</th>
                       <th>PHONE</th>
                       <th>OPTIONS</th>
                   </tr>
               </thead>
               <tbody>
-                  <tr  v-for="enterprise in arrayDepartments" :key="enterprise.id">
-                      <td>{{enterprise.id}}</td>
-                      <td>{{enterprise.address}}</td>
-                      <td>{{enterprise.name}}</td>
-                      <td>{{enterprise.phone}}</td>
+                  <tr  v-for="department in arrayDepartments" :key="department.id">
+                      <td>{{department.id}}</td>
+                      <td>{{department.description}}</td>
+                      <td>{{department.name}}</td>
+                      <td>{{department.phone}}</td>
                       <td>
-                          <router-link :to="{name:'EditDepartment',params:{id:enterprise.id}}" class="btn btn-primary"> EDITAR</router-link>
+                          <router-link :to="{name:'EditDepartment',params:{id:department.id}}" class="btn btn-primary"> EDITAR</router-link>
                         <!-- <a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a> -->
                       </td>
                   </tr>
@@ -68,7 +68,7 @@ export default {
     methods:{
         
         GetDepartments(){
-            fetch('http://jacastroq-002-site3.ftempurl.com/api/enterprises')
+            fetch('http://jacastroq-002-site3.ftempurl.com/api/departments')
             .then(allDepartments=>allDepartments.json())
             .then((dataAllDepartments)=>{
                 console.log(dataAllDepartments)
