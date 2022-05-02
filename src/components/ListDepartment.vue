@@ -7,7 +7,7 @@
     <h1> CREATE NEW DEPARTMENTS</h1>
     </div>
     <div class="card-body">
-        <a name="" id="" class="btn btn-success" href="./createDepartment" role="button">CREATE DEPARTMENT</a>
+        <router-link :to="{name:'CreateDepartment'}" class="btn btn-success"> CREATE DEPARTMENT</router-link>
     </div>
 </div>
 <br>

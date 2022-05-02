@@ -7,7 +7,7 @@
     <h1> CREATE NEW EMPLOYEES</h1>
     </div>
     <div class="card-body">
-        <a name="" id="" class="btn btn-success" href="./createEmployee" role="button">CREATE EMPLOYEE</a>
+        <router-link :to="{name:'CreateEmployee'}" class="btn btn-success"> CREATE EMPLOYEE</router-link>
     </div>
 </div>
 <br>
