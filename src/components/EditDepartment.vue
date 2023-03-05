@@ -27,9 +27,8 @@
 
 
                     <button type="submit" class="btn btn-primary">UPDATE</button>
-                    <a name="" id="" class="btn btn-danger" href="../listDepartment" role="button">CANCEL</a>
-                    
-                 
+                    <router-link :to="{name:'ListDepartment'}" class="btn btn-danger"> CANCEL</router-link>
+             
                 </div>
             </form>
         </div>
@@ -69,7 +68,7 @@ export default {
 
         updateDepartment: function(){
         
-        fetch('http://jacastroq-002-site3.ftempurl.com/api/departments/'+this.$route.params.id,{
+        fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/departments/'+this.$route.params.id,{
             method:"PUT",
             body:JSON.stringify(
                 {
@@ -89,7 +88,8 @@ export default {
             (
                     dataNewDepartment =>{
                     console.log(dataNewDepartment);
-                    window.location.href='../listDepartment'
+                    this.$router.push({ name: "ListDepartment"});
+                    // window.location.href='../listDepartment'
                 }
             )
         )

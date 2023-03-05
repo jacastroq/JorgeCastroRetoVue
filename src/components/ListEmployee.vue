@@ -70,7 +70,7 @@ export default {
     methods:{
         
         GetEmployees(){
-            fetch('http://jacastroq-002-site3.ftempurl.com/api/employees')
+            fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/employees')
             .then(allEmployees=>allEmployees.json())
             .then((dataAllEmployees)=>{
                 console.log(dataAllEmployees)

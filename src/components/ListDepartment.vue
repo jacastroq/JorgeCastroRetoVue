@@ -68,7 +68,7 @@ export default {
     methods:{
         
         GetDepartments(){
-            fetch('http://jacastroq-002-site3.ftempurl.com/api/departments')
+            fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/departments')
             .then(allDepartments=>allDepartments.json())
             .then((dataAllDepartments)=>{
                 console.log(dataAllDepartments)

@@ -27,8 +27,7 @@
 
 
                     <button type="submit" class="btn btn-primary">UPDATE</button>
-                    <a name="" id="" class="btn btn-danger" href="../listEnterprise" role="button">CANCEL</a>
-                    
+                    <router-link :to="{name:'ListEnterprise'}" class="btn btn-danger"> CANCELATION</router-link>                    
                  
                 </div>
             </form>
@@ -52,7 +51,7 @@ export default {
     methods:{
         getEnterpriseID(){
 
-             fetch('http://jacastroq-002-site3.ftempurl.com/api/enterprises/'+this.$route.params.id)
+             fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/enterprises/'+this.$route.params.id)
             .then(oneEnterprise=>oneEnterprise.json())
             .then((dataEnterprise)=>{
              //   console.log(this.$route.params.id)
@@ -89,7 +88,8 @@ export default {
             (
                     dataNewEnterprise =>{
                     console.log(dataNewEnterprise);
-                    window.location.href='../listEnterprise'
+                    this.$router.push({ name: "ListEnterprise"})
+                    // window.location.href='../listEnterprise'
                 }
             )
         )

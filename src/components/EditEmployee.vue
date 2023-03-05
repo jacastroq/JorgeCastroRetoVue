@@ -37,8 +37,7 @@
 
 
                     <button type="submit" class="btn btn-primary">UPDATE</button>
-                    <a name="" id="" class="btn btn-danger" href="../listEmployee" role="button">CANCEL</a>
-                    
+                    <router-link :to="{name:'ListEmployee'}" class="btn btn-danger"> CANCEL</router-link>
                  
                 </div>
             </form>
@@ -62,7 +61,7 @@ export default {
     methods:{
         getEmployeeID(){
 
-             fetch('http://jacastroq-002-site3.ftempurl.com/api/employees/'+this.$route.params.id)
+             fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/employees/'+this.$route.params.id)
             .then(oneEmployee=>oneEmployee.json())
             .then((dataEmployee)=>{
              //   console.log(this.$route.params.id)
@@ -102,7 +101,8 @@ export default {
             (
                     dataNewEmployee =>{
                     console.log(dataNewEmployee);
-                    window.location.href='../listEmployee'
+                    this.$router.push({ name: "ListEmployee"})
+                    // window.location.href='../listEmployee'
                 }
             )
         )

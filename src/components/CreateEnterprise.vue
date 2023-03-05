@@ -27,7 +27,8 @@
 
 
                     <button type="submit" class="btn btn-primary">AGREGATE</button>
-                    <a name="" id="" class="btn btn-danger" href="./listEnterprise" role="button">CANCEL</a>
+                    <router-link :to="{name:'ListEnterprise'}" class="btn btn-danger"> CANCEL</router-link>                    
+
                     
                  
                 </div>
@@ -52,7 +53,7 @@ export default {
 
     insertEnterprise: function(){
         
-        fetch('http://jacastroq-002-site3.ftempurl.com/api/enterprises',{
+        fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/enterprises',{
             method:"POST",
             body:JSON.stringify(
                 {
@@ -72,7 +73,8 @@ export default {
             (
                     dataNewEnterprise =>{
                     console.log(dataNewEnterprise);
-                    window.location.href='listEnterprise'
+                    this.$router.push({ name: "ListEnterprise"});
+                    // window.location.href='listEnterprise'
                 }
             )
         )

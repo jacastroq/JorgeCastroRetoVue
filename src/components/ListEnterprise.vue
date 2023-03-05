@@ -68,7 +68,7 @@ export default {
     methods:{
         
         GetEnterprises(){
-            fetch('http://jacastroq-002-site3.ftempurl.com/api/enterprises')
+            fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/enterprises')
             .then(allEnterprises=>allEnterprises.json())
             .then((dataAllEnterprises)=>{
                 console.log(dataAllEnterprises)
