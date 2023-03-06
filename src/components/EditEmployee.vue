@@ -79,7 +79,7 @@ export default {
 
         updateEmployee: function(){
         
-        fetch('http://jacastroq-002-site3.ftempurl.com/api/employees/'+this.$route.params.id,{
+        fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/employees/'+this.$route.params.id,{
             method:"PUT",
             body:JSON.stringify(
                 {

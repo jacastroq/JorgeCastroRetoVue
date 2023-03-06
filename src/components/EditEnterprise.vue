@@ -68,7 +68,7 @@ export default {
 
         updateEnterprise: function(){
         
-        fetch('http://jacastroq-002-site3.ftempurl.com/api/enterprises/'+this.$route.params.id,{
+        fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/enterprises/'+this.$route.params.id,{
             method:"PUT",
             body:JSON.stringify(
                 {

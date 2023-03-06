@@ -51,7 +51,7 @@ export default {
     methods:{
         getDepartmentID(){
 
-             fetch('http://jacastroq-002-site3.ftempurl.com/api/departments/'+this.$route.params.id)
+             fetch('https://jorgecastroreto20230305112547.azurewebsites.net/api/departments/'+this.$route.params.id)
             .then(oneDepartment=>oneDepartment.json())
             .then((dataDepartment)=>{
              //   console.log(this.$route.params.id)
